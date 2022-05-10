@@ -84,11 +84,16 @@ h3 {
 }
 
 p {
+    text-align: center;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    color: rgb(150, 150, 150);
+    font: 400 15px/1.8 "Lato", sans-serif;
+    font-size: medium;
+
 }
 
 
