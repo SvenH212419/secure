@@ -87,7 +87,75 @@
     <div style="position:relative;">
         <div style="color:#ddd;background-color:#ffffff;text-align:center;padding:50px 80px;text-align: justify;">
         <p>
-            
+            <div class="container">
+                1/5 Is getintopc.com veilig?<hr>
+                <p><a href="https://getintopc.com/" target="_blank">getintopc.com</a></p>
+                <input type="radio" name="question1" id="correct1">true<br>
+                <input type="radio" name="question1">false<br>
+                <button class="next" onclick="next(1)">NEXT</button>
+            </div>
+        
+            <div class="container">
+                2/5 Is facebook.com veilig?<hr>
+                <p><a href="https://www.facebook.com/" target="_blank">Facebook.com</a></p>
+                <input type="radio" name="question2" id="correct2">true<br>
+                <input type="radio" name="question2" >false<br>
+                <button class="next" onclick="next(2)">NEXT</button>
+            </div>
+        
+            <div class="container">
+                3/5 is deze site veilig?<hr>
+                <p><a href="" target="_blank">deze website.</a></p>
+                <input type="radio" name="question3" >true<br>
+                <input type="radio" name="question3" id="correct3">false<br>
+                <button class="next" onclick="next(3)">NEXT</button>
+            </div>
+        
+            <div class="container">
+                4/5 is msn.com veilig?<hr>
+                <p><a href="https://www.msn.com/nl-nl/" target="_blank">msn.com</a></p>
+                <input type="radio" name="question4" id="correct4">true<br>
+                <input type="radio" name="question4" >false<br>
+                <button class="next" onclick="next(4)">NEXT</button>
+            </div>
+        
+            <div class="container">
+                5/5 is ncsc.nl veilig?<hr>
+                <p><a href="https://www.ncsc.nl/onderwerpen/basismaatregelen" target="_blank">ncsc.nl</a></p>
+                <input type="radio" name="question5" id="correct5">true<br>
+                <input type="radio" name="question5" >false<br>
+                <button onclick="result()">Bekijk je resultaat.</button>
+            </div>
+            <script>
+                // displaying the first block of question
+                document.getElementsByClassName('container')[0].style.display = "block";
+        
+                // DEFINING THE NEXT FUNCTION
+                function next(id) {
+                    document.getElementsByClassName('container')[id-1].style.display = "none";
+                    document.getElementsByClassName('container')[id].style.display = "block";
+                }
+                //getting final result
+                function result() {
+                    var score = 0;
+                    if (document.getElementById('correct1').checked) {
+                        score++;
+                    }
+                    if (document.getElementById('correct2').checked) {
+                        score++;
+                    }
+                    if (document.getElementById('correct3').checked) {
+                        score++;
+                    }
+                    if (document.getElementById('correct4').checked) {
+                        score++;
+                    }
+                    if (document.getElementById('correct5').checked) {
+                        score++;
+                    }
+                    alert("your score is: "+ score);
+                }
+            </script>   
             
             </p>
         </div>
